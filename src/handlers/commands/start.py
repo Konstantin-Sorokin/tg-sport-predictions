@@ -1,7 +1,7 @@
 from aiogram import Router, types
 from aiogram.filters import CommandStart
 
-from src.keyboards.user_keyboards.reply.main_menu_kb import get_main_menu_kb
+from src.keyboards.user_keyboards import get_start_kb, StartButton
 
 router = Router(name=__name__)
 
@@ -10,5 +10,5 @@ router = Router(name=__name__)
 async def handle_start_command(message: types.Message):
     await message.answer(
         text="Hello",
-        reply_markup=get_main_menu_kb(),
+        reply_markup=get_start_kb(),
     )

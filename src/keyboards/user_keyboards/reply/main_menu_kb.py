@@ -1,22 +1,22 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
-class Button:
+class StartButton:
     PROFILE = "Профиль"
     PREDICTIONS = "Прогнозы"
     SEASONS = "Сезоны"
 
 
-def get_main_menu_kb():
+def get_start_kb():
     return ReplyKeyboardMarkup(
         resize_keyboard=True,
         keyboard=[
             [
-                KeyboardButton(text=Button.PREDICTIONS),
-                KeyboardButton(text=Button.SEASONS),
+                KeyboardButton(text=StartButton.PREDICTIONS),
+                KeyboardButton(text=StartButton.SEASONS),
             ],
             [
-                KeyboardButton(text=Button.PROFILE),
+                KeyboardButton(text=StartButton.PROFILE),
             ],
         ],
     )
