@@ -1,7 +1,10 @@
 from functools import lru_cache
 from dotenv import find_dotenv
 from pydantic import BaseModel, SecretStr
-from pydantic_settings import BaseSettings as _BaseSettings, SettingsConfigDict
+from pydantic_settings import (
+    BaseSettings as _BaseSettings,
+    SettingsConfigDict,
+)
 
 
 class BaseSettings(_BaseSettings):
