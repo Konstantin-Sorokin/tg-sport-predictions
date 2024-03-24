@@ -10,6 +10,7 @@ class StartButton:
 def get_start_kb():
     return ReplyKeyboardMarkup(
         resize_keyboard=True,
+        one_time_keyboard=True,
         keyboard=[
             [
                 KeyboardButton(text=StartButton.PREDICTIONS),
